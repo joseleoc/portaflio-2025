@@ -1,3 +1,7 @@
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 /* Default colors */
 :root {
   --primary: #7d4e24;
@@ -7,6 +11,7 @@
   --surface: #faf5ed;
   --text: #3a2a1a;
   --accent: #9f5f3c;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Dark mode colors */
@@ -18,6 +23,7 @@
   --surface: #2a2116;
   --text: #f0e6d6;
   --accent: #d67237;
+  --box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 /* Body header - content - footer*/
@@ -32,9 +38,7 @@ body {
   margin: 0 auto;
 }
 
-img {
-  object-fit: contain;
-}
+/* HEADER */
 
 .header {
   display: flex;
@@ -43,6 +47,23 @@ img {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--tertiary);
+  font-weight: bold;
+}
+
+.header-quote {
+  font-size: 1rem;
+  color: var(--tertiary);
 }
 
 .nav-container {
@@ -55,6 +76,18 @@ img {
   position: relative;
   min-height: 50px;
   width: 100%;
+}
+
+.nav-list {
+  color: var(--text);
+}
+
+a {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--accent);
 }
 
 /* Theme toggle button */
@@ -92,4 +125,97 @@ img {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+/* HERO */
+#hero {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: top;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+
+/* Experience */
+
+section {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--surface);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.card-header {
+  width: 100%;
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+  justify-self: center;
+}
+
+.technologies-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.technology-item {
+  cursor: default;
+  background-color: var(--surface);
+  color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.technology-item:hover {
+  background-color: var(--primary);
+  color: var(--text);
 }

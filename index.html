@@ -30,12 +30,14 @@
   </head>
   <body>
     <header class="header" role="banner">
-      <h1>Portafolio de Leonardo Contreras</h1>
-      <q> Primero resuelve el problema, después escribe el código </q>
+      <h1 class="header-title">Portafolio de Leonardo Contreras</h1>
+      <q class="header-quote">
+        Primero resuelve el problema, después escribe el código
+      </q>
 
       <div class="nav-container">
         <nav aria-label="Navegación principal">
-          <ul>
+          <ul class="nav-list">
             <li><a href="#hero" aria-current="page">Inicio</a></li>
             <li><a href="#experience">Experiencia</a></li>
             <li><a href="#projects">Proyectos</a></li>
@@ -104,7 +106,6 @@
 
     <main role="main">
       <section id="hero" aria-labelledby="hero-heading">
-        <h2 id="hero-heading">Hola, soy Leonardo Contreras</h2>
         <figure>
           <img
             src="./assets/img/avatar.jpg"
@@ -112,8 +113,12 @@
             width="150"
             height="150"
             loading="lazy"
+            class="avatar"
           />
         </figure>
+
+        <h2>Hola, soy Leonardo Contreras</h2>
+
         <p>
           Desarrollador frontend con más de 4 años de experiencia destacando en
           la creación de soluciones web y aplicaciones móviles. Experto en
@@ -124,27 +129,34 @@
         </p>
 
         <div role="group" aria-label="Acciones principales">
-          <a href="#projects" role="button">Ver Proyectos</a>
-          <a href="#contact" role="button">Contáctame</a>
-          <a
-            href="./assets/files/Resume-Leonardo-Contreras-es.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download="CV-Leonardo-Contreras.pdf"
+          <button
+            onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})"
+          >
+            Ver Proyectos
+          </button>
+
+          <button
+            onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+          >
+            Contáctame
+          </button>
+
+          <button
+            onclick="window.open('./assets/files/Resume-Leonardo-Contreras-es.pdf', '_blank')"
           >
             Descargar CV
-          </a>
+          </button>
         </div>
       </section>
 
       <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Experiencia Profesional</h2>
+        <h2>Experiencia Profesional</h2>
 
         <ul role="list">
           <li role="listitem">
-            <article>
+            <article class="card">
               <header>
-                <h3>Fullstack Developer</h3>
+                <h3 class="card-title">Fullstack Developer</h3>
                 <p><time datetime="2022">2022</time> - Presente</p>
                 <p>Lagoon Studios</p>
               </header>
@@ -156,20 +168,20 @@
               </p>
 
               <h4>Tecnologías utilizadas:</h4>
-              <ul role="list">
-                <li>React.js</li>
-                <li>React native</li>
-                <li>Typescript</li>
-                <li>Firebase</li>
-                <li>Jest</li>
+              <ul role="list" class="technologies-list">
+                <li class="technology-item">React.js</li>
+                <li class="technology-item">React native</li>
+                <li class="technology-item">Typescript</li>
+                <li class="technology-item">Firebase</li>
+                <li class="technology-item">Jest</li>
               </ul>
             </article>
           </li>
 
           <li role="listitem">
-            <article>
+            <article class="card">
               <header>
-                <h3>Frontend developer</h3>
+                <h3 class="card-title">Frontend developer</h3>
                 <p>
                   <time datetime="2022">2022</time> -
                   <time datetime="2024">2024</time>
@@ -184,12 +196,12 @@
               </p>
 
               <h4>Tecnologías utilizadas:</h4>
-              <ul role="list">
-                <li>Angular</li>
-                <li>Ionic</li>
-                <li>Firebase</li>
-                <li>NodeJS</li>
-                <li>Google Maps / Mapbox</li>
+              <ul role="list" class="technologies-list">
+                <li class="technology-item">Angular</li>
+                <li class="technology-item">Ionic</li>
+                <li class="technology-item">Firebase</li>
+                <li class="technology-item">NodeJS</li>
+                <li class="technology-item">Google Maps / Mapbox</li>
               </ul>
             </article>
           </li>
@@ -197,14 +209,14 @@
       </section>
 
       <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Proyectos Destacados</h2>
+        <h2>Proyectos Destacados</h2>
 
         <ul role="list">
           <li role="listitem">
-            <article>
-              <header>
-                <h3>Oneg</h3>
-                <figure>
+            <article class="card">
+              <header class="card-header">
+                <h3 class="card-title">Oneg</h3>
+                <figure class="card-img">
                   <img
                     src="./assets/img/projects/oneg-logo.svg"
                     alt="Logo del proyecto 'Oneg'"
@@ -222,24 +234,24 @@
               </p>
 
               <h4>Tecnologías utilizadas:</h4>
-              <ul role="list">
-                <li>NodeJs</li>
-                <li>NestJS</li>
-                <li>OpenIA</li>
-                <li>ChatGPT</li>
-                <li>Elevenlabs</li>
-                <li>Dall-E</li>
-                <li>MongoDB</li>
-                <li>Typescript</li>
+              <ul role="list" class="technologies-list">
+                <li class="technology-item">NodeJs</li>
+                <li class="technology-item">NestJS</li>
+                <li class="technology-item">OpenIA</li>
+                <li class="technology-item">ChatGPT</li>
+                <li class="technology-item">Elevenlabs</li>
+                <li class="technology-item">Dall-E</li>
+                <li class="technology-item">MongoDB</li>
+                <li class="technology-item">Typescript</li>
               </ul>
             </article>
           </li>
 
           <li role="listitem">
-            <article>
-              <header>
-                <h3>Kudoers</h3>
-                <figure>
+            <article class="card">
+              <header class="card-header">
+                <h3 class="card-title">Kudoers</h3>
+                <figure class="card-img">
                   <img
                     src="./assets/img/projects/kudoers-logo.svg"
                     alt="Logo del proyecto 'Kudoers'"
@@ -256,12 +268,12 @@
               </p>
 
               <h4>Tecnologías utilizadas:</h4>
-              <ul role="list">
-                <li>Angular</li>
-                <li>Ionic</li>
-                <li>Firebase</li>
-                <li>NodeJs</li>
-                <li>Typescript</li>
+              <ul role="list" class="technologies-list">
+                <li class="technology-item">Angular</li>
+                <li class="technology-item">Ionic</li>
+                <li class="technology-item">Firebase</li>
+                <li class="technology-item">NodeJs</li>
+                <li class="technology-item">Typescript</li>
               </ul>
             </article>
           </li>
@@ -269,7 +281,7 @@
       </section>
 
       <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contacto</h2>
+        <h2>Contacto</h2>
         <p>
           Siempre estoy interesado en escuchar sobre nuevos proyectos y
           oportunidades. ¡Contáctame!
