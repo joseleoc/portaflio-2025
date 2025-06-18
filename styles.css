@@ -202,11 +202,16 @@ body {
 }
 
 .skills-list li {
+  cursor: default;
   background-color: var(--primary);
   color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
+}
+
+.skills-list li:hover {
+  background-color: var(--secondary);
 }
 
 /* Button Styles */
@@ -264,6 +269,7 @@ button:hover {
 }
 
 .technology-item {
+  cursor: default;
   background-color: var(--primary);
   color: var(--text-secondary);
   padding: 0.5rem 1rem;
