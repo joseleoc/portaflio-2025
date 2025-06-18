@@ -7,25 +7,43 @@
 
 /* Color Schemes */
 :root {
-  --primary: #7d4e24;
-  --secondary: #c7795d;
-  --tertiary: #e07a2f;
-  --background: #f2e4d4;
-  --surface: #faf5ed;
-  --text: #3a2a1a;
-  --accent: #9f5f3c;
-  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --primary: #090040; /* Deep Navy (Main Brand Color) */
+  --secondary: #471396; /* Royal Purple (Secondary Brand) */
+  --tertiary: #b13bff; /* Electric Purple (Accent) */
+  --accent: #ffcc00; /* Golden Yellow (Highlight) */
+
+  /* UI/UX Functional Colors */
+  --background: #f8f8ff; /* Soft Blue-White (Light BG) */
+  --surface: #ffffff; /* Pure White (Cards/Containers) */
+  --text: #090040; /* Deep Navy (Primary Text) */
+  --text-secondary: #ffffff; /* Muted Navy (Secondary Text) */
+  --error: #ff3b3b; /* Red (Errors) */
+  --success: #00a86b; /* Green (Success) */
+
+  /* Effects */
+  --box-shadow: 0 4px 12px rgba(9, 0, 64, 0.1);
+  --glow-effect: 0 0 12px rgba(177, 59, 255, 0.3); /* For interactive elements */
 }
 
 .dark {
-  --primary: #a05e2c;
-  --secondary: #d18662;
-  --tertiary: #f0a35c;
-  --background: #1e160e;
-  --surface: #2a2116;
-  --text: #f0e6d6;
-  --accent: #d67237;
-  --box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  /* ===== Core Background Colors ===== */
+  --primary-bg: #0f0f0f; /* Rich black (primary surfaces) */
+  --secondary-bg: #232d3f; /* Dark navy (secondary surfaces) */
+  --tertiary-bg: #005b41; /* Deep emerald (accent containers) */
+  --accent-bg: #008170; /* Teal (interactive elements) */
+
+  /* ===== High-Contrast Text Colors ===== */
+  --text: #ffffff; /* White (19:1 contrast) */
+  --text-secondary: #e0f2fe; /* Ice blue (9:1 contrast) */
+  --text-tertiary: #ffffff; /* White (7.5:1 contrast) */
+  --text-accent: #ffffff; /* White (4.8:1 - use only for large text) */
+
+  /* ===== Supporting UI Colors ===== */
+  --background: #050505; /* Near-black (page BG) */
+  --surface: #1a1a1a; /* Dark gray (cards/modals) */
+
+  /* ===== Effects ===== */
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
 }
 
 /* Base Styles */
@@ -133,6 +151,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.bento-card article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .bento-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -173,11 +197,13 @@ body {
   gap: 0.5rem;
   list-style: none;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills-list li {
   background-color: var(--primary);
-  color: var(--text);
+  color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -224,7 +250,7 @@ button:hover {
 }
 
 .card-img {
-    justify-self: center;
+  justify-self: center;
 }
 
 .technologies-list {
@@ -233,11 +259,13 @@ button:hover {
   gap: 0.5rem;
   list-style: none;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .technology-item {
   background-color: var(--primary);
-  color: var(--text);
+  color: var(--text-secondary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
