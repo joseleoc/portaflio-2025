@@ -1,6 +1,7 @@
 # Informe – Portafolio con CSS
 
 ## Estilos aplicados
+- **Reset**: Se implementó un reset global para estilos base y reset global de los estilos que se aplican por defecto en los navegadores.
 - **Variables CSS**: Se utilizaron variables para colores, sombras y efectos, permitiendo un tema claro/oscuro con `:root` y `.dark`.  
 - **Diseño responsive**: Se implementó con `grid`, `flexbox` y media queries para adaptarse a móviles y escritorios.  
 - **Efectos visuales**: Transiciones suaves (`transform`, `box-shadow`), bordes redondeados y sombras para tarjetas.  
