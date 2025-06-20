@@ -10,7 +10,6 @@
 - **Clases (`.bento-card`, `.header-title`)**: Para estilos reutilizables y componentes modulares.  
 - **IDs (`#themeToggle`)**: Para elementos únicos como el botón de tema.  
 - **Etiquetas (`body`, `ul`, `button`)**: Para estilos base y reset global.  
-- **Atributos (`[aria-label]`)**: Mejoran accesibilidad sin afectar estilos.  
 
 ## Partes del diseño
 - **Fácil**: La estructura con CSS Grid y Flexbox fue sencilla gracias a su manejo intuitivo.  
@@ -18,6 +17,6 @@
 
 ## Aprendizajes clave
 - **Variables CSS**: Facilitan el mantenimiento y los temas dinámicos.  
-- **Accesibilidad**: Uso de `aria-label` y contraste adecuado.  
+- **Accesibilidad**: Contraste de colores adecuado para mejorar la legibilidad.
 - **Responsive**: Media queries combinadas con unidades relativas (`clamp()`, `gap`).  
 - **Transiciones**: Mejoran la experiencia de usuario con feedback visual.  
